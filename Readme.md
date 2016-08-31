@@ -1,9 +1,23 @@
+# Kurento RTSP2WebRTC PoC
+
+## run Kurento docker
+1. cd docker
+2. docker build -t kurento-docker-dev .
+3. docker run --name kms -p 8888:8888 -e GST_DEBUG=Kurento*:5 --rm -it kurento-docker-dev
+
+## run nodejs Client
+1. bower install
+2. npm install -g http-server
+3. http-server
+
+
+# Kurento readme
+
 [![][KurentoImage]][website]
 
 Copyright © 2014 Kurento. Licensed under [LGPL License].
 
-Kurento RTSP/HTTP URI to WebRTC example
-===========================
+## Kurento RTSP/HTTP URI to WebRTC example
 Kurento Client JavaScript demos
 
 This project is a simple example showing how to tranform a RTSP URI or an HTTP video URI
