@@ -39,7 +39,8 @@ if (args.ice_servers) {
 }
 
 window.addEventListener('load', function () {
-	// console = new Console('console', console);
+	// disable this if needs
+	console = new Console('console', console);
 	var videoOutput = document.getElementById('videoOutput');
 	var pipeline;
 	var webRtcPeer;
