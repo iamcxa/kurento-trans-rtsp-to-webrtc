@@ -1,15 +1,14 @@
 # Kurento RTSP2WebRTC PoC
 
-## run Kurento docker
+## 1. run Kurento docker
 1. cd docker
 2. docker build -t kurento-docker-dev .
 3. docker run --name kms -p 8888:8888 -e GST_DEBUG=Kurento*:5 --rm -it kurento-docker-dev
 
-## run nodejs Client
+## 2. run nodejs Client
 1. bower install
 2. npm install -g http-server
 3. http-server
-
 
 # Kurento readme
 
