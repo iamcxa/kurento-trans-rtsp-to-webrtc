@@ -33,7 +33,6 @@
 	<title>Kurento RTSP to WebRTC player</title>
 </head>
 
-
 <body>
 	<header>
 		<div class="navbar navbar-inverse navbar-fixed-top">
@@ -50,14 +49,25 @@
 		<div class="page-header">
 			<h1>Kurento RTSP to WebRTC player</h1>
 		</div>
+		<div id="video-controls" class="row">
+			<div class="col col-md-12">
+				<a id="start" href="#" class="btn btn-success"><span
+										class="glyphicon glyphicon-play"></span> Start</a>
+				<a id="stop" href="#" class="btn btn-danger">
+					<span class="glyphicon glyphicon-stop"></span> Stop</a>
+				<a id="snapshot" href="#" class="btn btn-info">
+					<span class="glyphicon glyphicon-info"></span> snapshot</a>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-md-6">
 				<h3>Remote stream</h3>
 
-				<!-- <video id="videoOutput" autoplay loop controls width="480px" height="360px"
+				<div id="video-container">
+					<!-- <video id="videoOutput" autoplay loop controls width="480px" height="360px"
 					poster="./img/webrtc.png"></video> -->
 
-				<video id="videoOutput" class="video-js" width="480px" height="360px" data-setup='{
+					<video id="videoOutput" class="video-js" width="480px" height="360px" style="border:black solid 1px;" data-setup='{
 							"autoplay": true,
 							"controls": true,
 							"loop": true,
@@ -69,11 +79,12 @@
 								"TextTrackDisplay": true
 							}
 						}' poster="./img/webrtc.png">
-					<p class="vjs-no-js">
-						To view this video please enable JavaScript, and consider upgrading to a web browser that
-						<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-					</p>
-				</video>
+						<p class="vjs-no-js">
+							To view this video please enable JavaScript, and consider upgrading to a web browser that
+							<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+						</p>
+					</video>
+				</div>
 
 				</br>
 				Set source URL:
@@ -81,17 +92,9 @@
 				</br>
 				</br>
 			</div>
-			<div class="col-md-2">
-				<a id="start" href="#" class="btn btn-success"><span
-					class="glyphicon glyphicon-play"></span> Start</a>
-				<br />
-				<br />
-				<a id="stop" href="#" class="btn btn-danger">
-					<span class="glyphicon glyphicon-stop"></span> Stop</a>
-				<br />
-				<br />
-				<a id="snapshot" href="#" class="btn btn-info">
-					<span class="glyphicon glyphicon-info"></span> snapshot</a>
+			<div class="col-md-6">
+				<h3>Screenshot</h3>
+					<div id="screenshot-container"></div>
 			</div>
 
 			<div class="row">
@@ -124,6 +127,8 @@
 	</div>
 
 	<script src="http://vjs.zencdn.net/5.10.8/video.js"></script>
+	<script src="./js/vidControl.js"></script>
+	<script src="./js/screenshot.js"></script>
 </body>
 
 </html>
