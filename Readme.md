@@ -1,5 +1,8 @@
 # Kurento RTSP2WebRTC PoC
 
+![image](https://cloud.githubusercontent.com/assets/1522808/19061362/c92e5a46-8a22-11e6-8336-ebcffa355d66.png)
+
+
 ## 1. run Kurento docker
 1. cd docker
 2. docker build -t kurento-docker-dev .
